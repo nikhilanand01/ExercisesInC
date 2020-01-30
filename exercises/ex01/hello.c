@@ -9,7 +9,7 @@ int main() {
 }
 
 /*
-1. subq	$16, %rsp; movl	$5, (%rbp)
+1. subq	$16, %rsp; movl	$5, -8(%rbp)
 
 2. The amount of instructions and lines significantly decreases as some instructions are gone.
 
