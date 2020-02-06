@@ -45,3 +45,16 @@ int main()
 
     return 0;
 }
+
+
+/*
+1: Print the address of arrays in foo() and bar(). The program should print "42" 5 times.
+
+2: Warning: The function returns the address of stack memory associated with local variable array. This means foo() is trying to return a pointer to a local array that will be taken off the stack after the function ends.
+
+3: A segmentation fault occurs. The address array in the main function is illegally
+editing that same memory address creating this segmentation fault.
+
+4: Warning: The local variable array in bar() is set but not used.
+
+*/
