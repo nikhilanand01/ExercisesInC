@@ -1,4 +1,4 @@
-/* worked with Gab Douglas on some of this file */
+/* worked with Gia Douglas on some of this file */
 
 
 #include <stdio.h>
@@ -35,12 +35,11 @@ int main(){
   int integers[maxLength];
   int counter = 0;
   int numb;
-  //int flag = 0;
 
   numb = getInput();
   while (numb != EOF){
-    if (counter > maxLength - 1){ /* Stop asking for user input when integer array is full*/
-      printf("You've entered more than the max of 10 numbers.\n");
+    if (counter > maxLength - 1){
+      printf("You've entered more than the max of 10 numbers. Auto-summing inputs now \n");
       break;
     }
     else{
