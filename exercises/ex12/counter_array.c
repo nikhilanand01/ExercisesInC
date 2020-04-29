@@ -73,7 +73,7 @@ void perform_task(int task_number) {
 
 void child_code(Shared *shared)
 {
-    printf("Starting child at counter %d\n", shared->counter);
+    // printf("Starting child at counter %d\n", shared->counter);
 
     while (1) {
         // check if we're done
@@ -87,9 +87,9 @@ void child_code(Shared *shared)
         shared->counter++;
 
         // update the progress bar
-        if (task_number % 10000 == 0) {
-            printf("%d\n", task_number);
-        }
+        // if (task_number % 10000 == 0) {
+        //     printf("%d\n", task_number);
+        // }
 
         // go off and do the task
         perform_task(task_number);
@@ -100,7 +100,7 @@ void *entry(void *arg)
 {
     Shared *shared = (Shared *) arg;
     child_code(shared);
-    printf("Child done.\n");
+    // printf("Child done.\n");
     pthread_exit(NULL);
 }
 
@@ -108,12 +108,12 @@ void check_array(Shared *shared)
 {
     int i, errors=0;
 
-    printf("Checking...\n");
+    // printf("Checking...\n");
 
     for (i=0; i<shared->end; i++) {
         if (shared->array[i] != 1) errors++;
     }
-    printf("%d errors.\n", errors);
+    // printf("%d errors.\n", errors);
 }
 
 int main()
